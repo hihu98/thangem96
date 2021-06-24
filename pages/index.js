@@ -27,7 +27,7 @@ export default function Home() {
                         setForm(f => ({ ...f, [v]: e.target.value }))
                     }
                     value={form[v]}
-                    autocapitalize="none"
+                    autoCapitalize="none"
                     placeholder={t}
                 />
             </div>
