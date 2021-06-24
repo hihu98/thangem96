@@ -27,22 +27,22 @@ export default function Home() {
                         setForm(f => ({ ...f, [v]: e.target.value }))
                     }
                     value={form[v]}
+                    autocapitalize="none"
                     placeholder={t}
                 />
             </div>
         )
     }
 
-    const text = `Ngành ${job} Việt Nam hiện nay ở đầu của sự phát triển. Có thể nói ${job} là vua của các nghề. Vừa có tiền, có quyền. Vừa kiếm được nhiều $ lại được xã hội trọng vọng. 
-
+    const text = `Ngành ${job} Việt Nam hiện nay ở đầu của sự phát triển. Có thể nói ${job} là vua của các nghề. Vừa có tiền, có quyền. Vừa kiếm được nhiều $ lại được xã hội trọng vọng.
   Thằng em mình học bách khoa cơ khí, sinh năm 96. Tự mày mò ${selfStudy} rồi đi làm ${currentJob}. Mỗi tối online 3-4 giờ là xong việc. Lương tháng 3k6. Nhưng thu nhập chính vẫn là từ ${sideJob}. Tuần làm 2,3 cái nhẹ nhàng 9,10k tiền tươi thóc thật không phải đóng thuế. Làm gần được 3 năm mà nhà xe nó đã mua đủ cả. Nghĩ mà thèm.
-  
   Gái gú thì cứ nghe nó bảo làm CNTT thì chảy nước. Có bé kia dân du học sinh Úc, về được cô chị giới thiệu làm ngân hàng VCB. Thế nào thằng ấy đi mở thẻ tín dụng gặp phải thế là hốt được cả chị lẫn em. 3 đứa nó sống chung một căn hộ cao cấp. Nhà con bé vừa giàu vừa gia giáo (cha là tiến sĩ giảng viên đại học, mẹ nó à phó chánh án) biết chuyện ban đầu phản đối sau biết thằng đấy ${jobVerb} thì đổi thái độ, cách ba bữa hỏi thăm, năm bữa tặng quà cho ba mẹ nó giục cưới kẻo lỡ kèo. Định tháng này cưới con chị và tiêp tục sống với con em nhưng dính dịch dời đám cưới lại rồi.`
 
     const clickCopy = () => {
-        if  (navigator?.clipboard) navigator.clipboard.writeText(text)
-        else if (window?.navigator?.clipboard) window.navigator.clipboard.writeText(text)
-        else return 
+        if (navigator?.clipboard) navigator.clipboard.writeText(text)
+        else if (window?.navigator?.clipboard)
+            window.navigator.clipboard.writeText(text)
+        else return
 
         setCopied(true)
         setTimeout(() => setCopied(false), 2500)
