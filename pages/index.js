@@ -88,7 +88,7 @@ Gái gú thì cứ nghe nó bảo làm ${jobVerb} thì chảy nước. Có bé k
                     thuế. Làm gần được 3 năm mà nhà xe nó đã mua đủ cả. Nghĩ mà
                     thèm.
                     <br />
-                    Gái gú thì cứ nghe nó bảo làm{' '}
+                    Gái gú thì cứ nghe nó bảo{' '}
                     <span className="text-blue-500">{jobVerb}</span> thì chảy
                     nước. Có bé kia dân du học sinh Úc, về được cô chị giới
                     thiệu làm ngân hàng VCB. Thế nào thằng ấy đi mở thẻ tín dụng
