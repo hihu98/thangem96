@@ -40,7 +40,10 @@ export default function Home() {
   Gái gú thì cứ nghe nó bảo làm CNTT thì chảy nước. Có bé kia dân du học sinh Úc, về được cô chị giới thiệu làm ngân hàng VCB. Thế nào thằng ấy đi mở thẻ tín dụng gặp phải thế là hốt được cả chị lẫn em. 3 đứa nó sống chung một căn hộ cao cấp. Nhà con bé vừa giàu vừa gia giáo (cha là tiến sĩ giảng viên đại học, mẹ nó à phó chánh án) biết chuyện ban đầu phản đối sau biết thằng đấy ${jobVerb} thì đổi thái độ, cách ba bữa hỏi thăm, năm bữa tặng quà cho ba mẹ nó giục cưới kẻo lỡ kèo. Định tháng này cưới con chị và tiêp tục sống với con em nhưng dính dịch dời đám cưới lại rồi.`
 
     const clickCopy = () => {
-        navigator.clipboard.writeText(text)
+        if  (navigator?.clipboard) navigator.clipboard.writeText(text)
+        else if (window?.navigator?.clipboard) window.navigator.clipboard.writeText(text)
+        else return 
+
         setCopied(true)
         setTimeout(() => setCopied(false), 2500)
     }
