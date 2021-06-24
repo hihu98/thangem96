@@ -22,7 +22,7 @@ export default function Home() {
                 </label>
                 <input
                     id={v}
-                    className="w-full py-2 px-5 border rounded"
+                    className="w-full py-2 px-5 border border-gray-300 focus:border-blue-500 rounded"
                     onChange={e =>
                         setForm(f => ({ ...f, [v]: e.target.value }))
                     }
