@@ -17,10 +17,11 @@ export default function Home() {
     const renderInput = (v, t) => {
         return (
             <div className="mt-2 flex flex-wrap w-full md:w-1/2 md:px-2">
-                <label className="w-full font-bold mb-2" for={v}>
+                <label className="w-full font-bold mb-2" htmlFor={v}>
                     {t}
                 </label>
                 <input
+                    id={v}
                     className="w-full py-2 px-5 border rounded"
                     onChange={e =>
                         setForm(f => ({ ...f, [v]: e.target.value }))
